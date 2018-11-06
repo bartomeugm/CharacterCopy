@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -14,19 +13,19 @@ public class CopierShould {
         sourceLambdas.add(() -> 'a');
         sourceLambdas.add(() -> 'b');
         sourceLambdas.add(() -> '\n');
-        SourceSpy source = new SourceSpy(sourceLambdas);
+        SourceStub source = new SourceStub(sourceLambdas);
 
-        ArrayList<Consumer<Character>> destinationLambdas = new ArrayList<>();
-        destinationLambdas.add((Character inputCharacter) -> {});
-        destinationLambdas.add((Character inputCharacter) -> {});
-        destinationLambdas.add((Character inputCharacter) -> {});
+        ArrayList<Supplier<Character>> destinationLambdas = new ArrayList<>();
+        destinationLambdas.add(() -> 'a');
+        destinationLambdas.add(() -> 'b');
+        destinationLambdas.add(() -> '\n');
         DestinationSpy destination = new DestinationSpy(destinationLambdas);
 
         Copier copier = new Copier(source, destination);
 
         copier.copy();
 
-        assertTrue(source.verifyGetCharCalledNTimes(3));
         assertTrue(destination.verifySetCharCalledNTimes(3));
+        assertTrue(destination.verifyOrder("ab\n"));
     }
 }
