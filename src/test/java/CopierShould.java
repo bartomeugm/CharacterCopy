@@ -16,7 +16,7 @@ public class CopierShould {
         Copier copier = new Copier(source, destination);
         copier.copy();
 
-        InOrder order = inOrder(source, destination);
+        InOrder order = inOrder(destination);
         order.verify(destination).setChar('a');
         order.verify(destination).setChar('b');
         order.verify(destination).setChar('\n');
