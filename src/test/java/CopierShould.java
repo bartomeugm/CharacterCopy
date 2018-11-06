@@ -9,22 +9,17 @@ public class CopierShould {
 
     @Test
     void copy_the_chars_in_the_same_order() {
-        ArrayList<Supplier<Character>> sourceLambdas = new ArrayList<>();
-        sourceLambdas.add(() -> 'a');
-        sourceLambdas.add(() -> 'b');
-        sourceLambdas.add(() -> '\n');
-        SourceStub source = new SourceStub(sourceLambdas);
-
-        ArrayList<Supplier<Character>> destinationLambdas = new ArrayList<>();
-        destinationLambdas.add(() -> 'a');
-        destinationLambdas.add(() -> 'b');
-        destinationLambdas.add(() -> '\n');
-        DestinationSpy destination = new DestinationSpy(destinationLambdas);
+        ArrayList<Supplier<Character>> lambdas = new ArrayList<>();
+        lambdas.add(() -> 'a');
+        lambdas.add(() -> 'b');
+        lambdas.add(() -> '\n');
+        SourceStub source = new SourceStub(lambdas);
+        DestinationSpy destination = new DestinationSpy(lambdas);
 
         Copier copier = new Copier(source, destination);
 
         copier.copy();
 
-        assertTrue(destination.verifyOrder("ab\n"));
+        assertTrue(destination.verifyOrder(new char[]{'a', 'b', '\n'}));
     }
 }
