@@ -8,7 +8,7 @@ import static org.mockito.Mockito.when;
 public class CopierShould {
 
     @Test
-    void call_getChar_same_times_as_setChar() {
+    void copy_the_characters() {
         ISource source = Mockito.mock(ISource.class);
         IDestination destination = Mockito.mock(IDestination.class);
         when(source.getChar()).thenReturn('a', 'b', '\n');
