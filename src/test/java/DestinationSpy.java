@@ -19,10 +19,6 @@ public class DestinationSpy implements IDestination {
         characters.add(lambdas.get(calledNTimes++).get());
     }
 
-    public Boolean verifySetCharCalledNTimes(int i) {
-        return calledNTimes == i;
-    }
-
     public Boolean verifyOrder(String expectedString) {
         String actualString = "";
         Iterator it = characters.iterator();

@@ -637,7 +637,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541498935809" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541499036729" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -668,16 +668,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CopierShould.call_getChar_same_times_as_setChar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CharacterCopy_test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CopierShould" />
-      <option name="METHOD_NAME" value="call_getChar_same_times_as_setChar" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CopierShould.call_getChart_same_times_as_chars_are_there" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CharacterCopy_test" />
       <option name="PACKAGE_NAME" value="" />
@@ -688,15 +678,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CopierShould.copy_the_chars_in_the_same_order" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CharacterCopy_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CopierShould" />
+      <option name="METHOD_NAME" value="copy_the_chars_in_the_same_order" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.CopierShould" />
       <item itemvalue="JUnit.CopierShould.call_getChart_same_times_as_chars_are_there" />
-      <item itemvalue="JUnit.CopierShould.call_getChar_same_times_as_setChar" />
+      <item itemvalue="JUnit.CopierShould.copy_the_chars_in_the_same_order" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CopierShould" />
-        <item itemvalue="JUnit.CopierShould.call_getChar_same_times_as_setChar" />
+        <item itemvalue="JUnit.CopierShould.copy_the_chars_in_the_same_order" />
         <item itemvalue="JUnit.CopierShould.call_getChart_same_times_as_chars_are_there" />
       </list>
     </recent_temporary>

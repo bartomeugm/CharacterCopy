@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CopierShould {
 
     @Test
-    void call_getChar_same_times_as_setChar() {
+    void copy_the_chars_in_the_same_order() {
         ArrayList<Supplier<Character>> sourceLambdas = new ArrayList<>();
         sourceLambdas.add(() -> 'a');
         sourceLambdas.add(() -> 'b');
@@ -25,7 +25,6 @@ public class CopierShould {
 
         copier.copy();
 
-        assertTrue(destination.verifySetCharCalledNTimes(3));
         assertTrue(destination.verifyOrder("ab\n"));
     }
 }
